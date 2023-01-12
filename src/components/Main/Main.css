@@ -1,0 +1,69 @@
+.planet {
+
+}
+
+.planet__img {
+    max-width: 290px;
+    max-height: 290px;
+}
+
+.planet__block {
+    color: #FFFFFF;
+}
+
+.planet__name {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 104px;
+    text-transform: uppercase;
+}
+
+.planet__desc {
+    color: #FFFFFF;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.planet__link {
+    color: #838391;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.planet__wiki {
+    color: #38384F;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.planet__link-img {
+    width: 12px;
+    height: 12px;
+}
+
+.planet__list {
+}
+
+.planet__item {
+}
+
+.planet__cards {
+
+}
+
+.planet__card {
+}
+
+.planet__card-title {
+    color: #838391;}
+
+.planet__card-desc {
+    color: #FFFFFF;
+}
