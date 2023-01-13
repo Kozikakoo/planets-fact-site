@@ -17,7 +17,7 @@
 }
 
 .header__nav {
-    color: #838391;
+
     align-self: center;
     margin-right: 40px;
 }
@@ -41,4 +41,45 @@
 
 .header__planet:last-of-type {
     margin-right: 0;
+}
+
+/*.header__planet:hover {*/
+/*    opacity: 0.5;*/
+/*}*/
+
+.header__planet-link_mer:hover, .header__planet-link_mer:active {
+    color: #419EBB;
+}
+
+.header__planet-link_ven:hover, .header__planet-link_ven:active {
+    color: #EDA249;
+}
+
+.header__planet-link_ear:hover, .header__planet-link_ear:active {
+    color: #6D2ED5;
+}
+
+.header__planet-link_mar:hover, .header__planet-link_mar {
+    color: #D14C32;
+}
+
+.header__planet-link_jup:hover, .header__planet-link_jup:active {
+    color: #D83A34;
+}
+
+.header__planet-link_sat:hover, .header__planet-link_sat:active {
+    color: #CD5120;
+}
+
+.header__planet-link_ura:hover, .header__planet-link_ura:active {
+    color: #1EC1A2;
+}
+
+.header__planet-link_nep:hover, .header__planet-link_nep:active {
+    color: #2D68F0;
+}
+
+.header__planet-link {
+    text-decoration: none;
+    color: #838391;
 }

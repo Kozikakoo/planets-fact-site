@@ -1,30 +1,44 @@
 import React from "react";
-import {Route} from "react-router-dom";
-import Main from "../Main/Main";
-import {mercury, venus, earth, mars, jupiter, saturn, uranus, neptune} from "../../utils/constants"
+import {Route, Routes} from "react-router-dom";
+import Mercury from "../Planets/Mercury";
+import Earth from "../Planets/Earth";
+import Venus from "../Planets/Venus";
+import Mars from "../Planets/Mars";
+import Jupiter from "../Planets/Jupiter";
+import Saturn from "../Planets/Saturn";
+import Uranus from "../Planets/Uranus";
+import Neptune from "../Planets/Neptune";
 
 
 function App() {
+    const planet = document.querySelector(".planet");
+
+    const handleChangeGap = (planetName) => {
+        planet.classList.add(planetName)
+    }
+
     return (
         <div className="App">
+            <Routes>
+                <Route exact path="/" element={<Mercury/>}/>
 
+                <Route path="/mars" element={<Mars/>}/>
 
-                <Main planet="mercury"
-                      img={mercury}
-                      desc="Mercury appears to have a solid silicate crust and mantle overlying a solid,
-                       iron sulfide outer core layer, a deeper liquid core layer, and a solid inner core.
-                        The planet's density is the second highest in the Solar System at 5.427 g/cm3,
-                         only slightly less than Earth's density."
-                      wiki=""
-                      rotation="58.6 days"
-                      revolution="87.97 days"
-                      radius="2,439.7 km"
-                      temp="430°c"
-                />
+                <Route path="/earth" element={<Earth/>}/>
 
+                <Route path="/jupiter" element={<Jupiter/>}/>
+
+                <Route path="/saturn" element={<Saturn/>}/>
+
+                <Route path="/uranus" element={<Uranus/>}/>
+
+                <Route path="/neptune" element={<Neptune changeGap={(planetName)=>handleChangeGap(planetName)}/>}/>
+
+                <Route path="/venus" element={<Venus/>}/>
+            </Routes>
 
         </div>
-    )
+)
 
 }
 
