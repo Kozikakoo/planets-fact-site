@@ -3,7 +3,11 @@
     row-gap: 87px;
     grid-template-areas: "img text"
                          "cards cards";
-    padding: 126px 0 56px 0;
+    padding: 126px 165px 56px;
+    position: relative;
+    box-sizing: border-box;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .planet-mercury {
@@ -45,13 +49,15 @@
     color: #FFFFFF;
     font-family: 'Antonio', Arial sans-serif;
     font-size: 17px;
+    position: absolute;
 }
 
 .planet__block {
     color: #FFFFFF;
     grid-area: text;
     align-self: center;
-    justify-self: start;
+    justify-self: end;
+
 }
 
 .planet__name {
@@ -62,6 +68,8 @@
     text-transform: uppercase;
     margin-bottom: 23px;
     margin-top: 0;
+    position: relative;
+    top: 0
 }
 
 .planet__desc {
@@ -71,6 +79,7 @@
     font-size: 14px;
     line-height: 25px;
     max-width: 350px;
+    height: 175px;
     margin: 0;
 }
 
