@@ -3,7 +3,21 @@ import Header from "../Header/Header";
 import icon from "../../assets/icon-source.svg"
 
 
-function Main({planetClass, planet, descOverview, descStructure, descGeology, wiki, rotation, revolution, radius, temp, imgOverview, imgStructure, imgGeology}) {
+function Main({
+                  planetClass,
+                  planet,
+                  descOverview,
+                  descStructure,
+                  descGeology,
+                  wiki,
+                  rotation,
+                  revolution,
+                  radius,
+                  temp,
+                  imgOverview,
+                  imgStructure,
+                  imgGeology
+              }) {
     const [isClickedOverview, setIsClickedOverview] = React.useState(true)
     const [isClickedStructure, setIsClickedStructure] = React.useState(false)
     const [isClickedGeology, setIsClickedGeology] = React.useState(false)
@@ -27,29 +41,29 @@ function Main({planetClass, planet, descOverview, descStructure, descGeology, wi
     }
 
     const handleChangeDescription = () => {
-        if(isClickedOverview) {
+        if (isClickedOverview) {
             return descOverview
         }
 
-        if(isClickedGeology) {
+        if (isClickedGeology) {
             return descGeology
         }
 
-        if(isClickedStructure) {
+        if (isClickedStructure) {
             return descStructure
         }
     }
 
     const handleChangeImage = () => {
-        if(isClickedOverview) {
+        if (isClickedOverview) {
             return imgOverview
         }
 
-        if(isClickedGeology) {
+        if (isClickedGeology) {
             return imgGeology
         }
 
-        if(isClickedStructure) {
+        if (isClickedStructure) {
             return imgStructure
         }
     }
@@ -58,8 +72,10 @@ function Main({planetClass, planet, descOverview, descStructure, descGeology, wi
     return (
         <>
             <Header/>
-            <main className={`planet planet-${planetClass}`}>
-                <img className="planet__img" src={handleChangeImage()} alt="Planet"/>
+            <main className="planet">
+                <div className="planet__img-container">
+                    <img className="planet__img" src={handleChangeImage()} alt="Planet"/>
+                </div>
                 <div className="planet__block">
                     <h2 className="planet__name">{planet}</h2>
                     <p className="planet__desc">{handleChangeDescription()}</p>

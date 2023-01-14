@@ -17,7 +17,6 @@
 }
 
 .header__nav {
-
     align-self: center;
     margin-right: 40px;
 }
@@ -42,10 +41,6 @@
 .header__planet:last-of-type {
     margin-right: 0;
 }
-
-/*.header__planet:hover {*/
-/*    opacity: 0.5;*/
-/*}*/
 
 .header__planet-link_mer:hover, .header__planet-link_mer:active {
     color: #419EBB;
@@ -82,4 +77,23 @@
 .header__planet-link {
     text-decoration: none;
     color: #838391;
+}
+
+@media screen and (max-width: 1140px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__name {
+       margin: 32px auto 28px;
+    }
+
+    .header__nav {
+        margin: 0 auto;
+    }
+
+    .header__planets {
+        padding: 0;
+    }
 }

@@ -2,50 +2,23 @@
     display: grid;
     row-gap: 87px;
     grid-template-areas: "img text"
-                         "cards cards";
-    padding: 126px 165px 56px;
+         "cards cards";
+    padding: 126px 11.5% 56px;
     position: relative;
     box-sizing: border-box;
     max-width: 1440px;
     margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.planet-mercury {
-    column-gap: 300px;
-}
-
-.planet-neptune {
-    column-gap: 220px;
-}
-
-.planet-mars {
-    column-gap: 277px;
-}
-
-.planet-earth {
-    column-gap: 220px;
-}
-
-.planet-venus {
-    column-gap: 245px;
-}
-
-.planet-saturn {
-    column-gap: 111px;
-}
-
-.planet-jupiter {
-    column-gap: 154px;
-}
-
-.planet-uranus {
-    column-gap: 216px;
+.planet__img-container {
+    grid-area: img;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .planet__img {
-    grid-area: img;
-    justify-self: end;
-    align-self: center;
     color: #FFFFFF;
     font-family: 'Antonio', Arial sans-serif;
     font-size: 17px;
@@ -57,7 +30,6 @@
     grid-area: text;
     align-self: center;
     justify-self: end;
-
 }
 
 .planet__name {
@@ -243,4 +215,87 @@
     letter-spacing: -1.5px;
     text-transform: uppercase;
     margin: 0;
+}
+
+@media screen and (max-width: 1140px) {
+    .planet {
+        display: flex;
+        padding: 0 0 36px;
+        flex-direction: column;
+        row-gap: 0;
+    }
+
+    .planet__img-container {
+        height: 460px;
+    }
+
+    .planet__img {
+        position: static;
+        justify-self: end;
+        align-self: center;
+        transform: scale(0.63);
+    }
+
+    .planet__block {
+        display: grid;
+        grid-template-areas: "name button"
+                             "text button"
+                             "link button";
+        column-gap: 69px;
+    }
+
+    .planet__name {
+        grid-area: name;
+    }
+
+    .planet__desc {
+        grid-area: text;
+        max-height: 120px;
+    }
+
+    .planet__wiki {
+        grid-area: link;
+
+    }
+
+    .planet__item {
+        width: 281px;
+        height: 40px;
+    }
+
+    .planet__list {
+        font-size: 9px;
+        line-height: 25px;
+        grid-area: button;
+    }
+
+    .planet__card {
+        width: 164px;
+        height: 88px;
+        margin-right: 11px;
+        padding-left: 15px;
+    }
+
+    .planet__card-title {
+        font-size: 8px;
+        line-height: 16px;
+        margin-top: 16px;
+        margin-bottom: 6px;
+    }
+
+    .planet__card-desc {
+        font-size: 24px;
+        line-height: 31px;
+    }
+
+    .planet__name {
+        font-size: 48px;
+        line-height: 62px;
+    }
+
+    .planet__desc {
+        font-size: 11px;
+        line-height: 22px;
+    }
+
 }

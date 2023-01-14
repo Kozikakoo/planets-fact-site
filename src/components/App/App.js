@@ -13,32 +13,29 @@ import Neptune from "../Planets/Neptune";
 function App() {
     const planet = document.querySelector(".planet");
 
-    const handleChangeGap = (planetName) => {
-        planet.classList.add(planetName)
-    }
 
     return (
         <div className="App">
-            <Routes>
-                <Route exact path="/" element={<Mercury/>}/>
+                <Routes>
+                    <Route exact path="/" element={<Mercury/>}/>
 
-                <Route path="/mars" element={<Mars/>}/>
+                    <Route path="/mars" element={<Mars/>}/>
 
-                <Route path="/earth" element={<Earth/>}/>
+                    <Route path="/earth" element={<Earth/>}/>
 
-                <Route path="/jupiter" element={<Jupiter/>}/>
+                    <Route path="/jupiter" element={<Jupiter/>}/>
 
-                <Route path="/saturn" element={<Saturn/>}/>
+                    <Route path="/saturn" element={<Saturn/>}/>
 
-                <Route path="/uranus" element={<Uranus/>}/>
+                    <Route path="/uranus" element={<Uranus/>}/>
 
-                <Route path="/neptune" element={<Neptune changeGap={(planetName)=>handleChangeGap(planetName)}/>}/>
+                    <Route path="/neptune"
+                           element={<Neptune/>}/>
 
-                <Route path="/venus" element={<Venus/>}/>
-            </Routes>
-
+                    <Route path="/venus" element={<Venus/>}/>
+                </Routes>
         </div>
-)
+    )
 
 }
 
