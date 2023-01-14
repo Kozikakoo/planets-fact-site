@@ -5,6 +5,7 @@ function Header() {
     return (
         <header className="header">
             <h1 className="header__name">THE PLANETS</h1>
+            <div className="header__menu"></div>
             <nav className="header__nav">
                 <ul className="header__planets">
                     <li className="header__planet">

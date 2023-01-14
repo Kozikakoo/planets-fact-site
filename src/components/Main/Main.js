@@ -73,9 +73,24 @@ function Main({
         <>
             <Header/>
             <main className="planet">
+
+                <div className="planet__hidden-button">
+                    <button className={`planet__button ${isClickedOverview && `planet__button-${planetClass}`}`}
+                            type="button" onClick={handleChangeOverview}>
+                        OVERVIEW
+                    </button>
+                    <button className={`planet__button ${isClickedStructure && `planet__button-${planetClass}`}`} type="button" onClick={handleChangeStructure}>
+                            Structure
+                    </button>
+                    <button className={`planet__button ${isClickedGeology && `planet__button-${planetClass}`}`} type="button" onClick={handleChangeGeology}>
+                            Geology
+                    </button>
+                </div>
+
                 <div className="planet__img-container">
                     <img className="planet__img" src={handleChangeImage()} alt="Planet"/>
                 </div>
+
                 <div className="planet__block">
                     <h2 className="planet__name">{planet}</h2>
                     <p className="planet__desc">{handleChangeDescription()}</p>
@@ -90,7 +105,7 @@ function Main({
                             </li>
                         </button>
                         <button className="planet__button" type="button" onClick={handleChangeStructure}>
-                            <li className={`planet__item ${isClickedStructure && `planet__item-${planetClass}`} `}>
+                            <li className={`planet__item ${isClickedStructure && `planet__item-${planetClass}`} planet__item-structure`}>
                                 Internal
                                 Structure
                             </li>

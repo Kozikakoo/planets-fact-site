@@ -16,6 +16,10 @@
     margin: 22px 0 27px 32px;
 }
 
+.header__menu {
+    display: none;
+}
+
 .header__nav {
     align-self: center;
     margin-right: 40px;
@@ -86,7 +90,7 @@
     }
 
     .header__name {
-       margin: 32px auto 28px;
+        margin: 32px auto 28px;
     }
 
     .header__nav {
@@ -95,5 +99,26 @@
 
     .header__planets {
         padding: 0;
+    }
+}
+
+@media screen and (max-width: 724px) {
+    .header {
+        flex-direction: row;
+        padding: 16px 24px;
+    }
+    .header__name {
+        margin: 0;
+    }
+    .header__nav {
+        display: none;
+    }
+
+    .header__menu {
+        display: block;
+        background-image: url("../../assets/icon-hamburger.svg");
+        width: 24px;
+        height: 17px;
+
     }
 }
