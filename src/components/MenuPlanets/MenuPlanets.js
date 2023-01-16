@@ -1,50 +1,68 @@
 import {Link} from "react-router-dom";
 import React from "react";
 
-function MenuPlanets() {
-    return(
+function MenuPlanets({closeMenu}) {
+
+
+    return (
         <nav className="hamburger__nav">
             <ul className="hamburger__planets">
-                <li className="hamburger__planet">
-                    <div className="hamburger__planet-icon hamburger__planet-icon_mer"></div>
-                    <Link className="hamburger__planet-link" to="/">mercury</Link>
-                    <div className="hamburger__icon-chevron"></div>
-                </li>
-                <li className="hamburger__planet">
-                    <div className="hamburger__planet-icon hamburger__planet-icon_ven"></div>
-                    <Link className="hamburger__planet-link" to="/venus">venus</Link>
-                    <div className="hamburger__icon-chevron"></div>
-                </li>
+                <Link className="hamburger__planet-link" to="/" onClick={closeMenu}>
+                    <li className="hamburger__planet">
+                        <div className="hamburger__planet-icon hamburger__planet-icon_mer"></div>
+                        <p className="hamburger__planet-name">mercury</p>
+                        <div className="hamburger__icon-chevron"></div>
+                    </li>
+                </Link>
+                <Link className="hamburger__planet-link" to="/venus" onClick={closeMenu}>
+                    <li className="hamburger__planet">
+                        <div className="hamburger__planet-icon hamburger__planet-icon_ven"></div>
+                        <p className="hamburger__planet-name">venus</p>
+                        <div className="hamburger__icon-chevron"></div>
+                    </li>
+                </Link>
+                <Link className="hamburger__planet-link" to="/earth" onClick={closeMenu}>
                 <li className="hamburger__planet">
                     <div className="hamburger__planet-icon hamburger__planet-icon_ear"></div>
-                    <Link className="hamburger__planet-link" to="/earth">earth</Link>
+                    <p className="hamburger__planet-name">earth</p>
                     <div className="hamburger__icon-chevron"></div>
                 </li>
+            </Link>
+                <Link className="hamburger__planet-link" to="/mars" onClick={closeMenu}>
                 <li className="hamburger__planet">
                     <div className="hamburger__planet-icon hamburger__planet-icon_mar"></div>
-                    <Link className="hamburger__planet-link" to="/mars">mars</Link>
+                    <p className="hamburger__planet-name">mars</p>
                     <div className="hamburger__icon-chevron"></div>
                 </li>
+            </Link>
+                <Link className="hamburger__planet-link" to="/jupiter" onClick={closeMenu}>
                 <li className="hamburger__planet">
                     <div className="hamburger__planet-icon hamburger__planet-icon_jup"></div>
-                    <Link className="hamburger__planet-link" to="/jupiter">jupiter</Link>
+                    <p className="hamburger__planet-name">jupiter</p>
                     <div className="hamburger__icon-chevron"></div>
                 </li>
+            </Link>
+                <Link className="hamburger__planet-link" to="/saturn" onClick={closeMenu}>
                 <li className="hamburger__planet">
                     <div className="hamburger__planet-icon hamburger__planet-icon_sat"></div>
-                    <Link className="hamburger__planet-link" to="/saturn">saturn</Link>
+                    <p className="hamburger__planet-name">saturn</p>
                     <div className="hamburger__icon-chevron"></div>
                 </li>
+            </Link>
+                <Link className="hamburger__planet-link" to="/uranus" onClick={closeMenu}>
                 <li className="hamburger__planet">
                     <div className="hamburger__planet-icon hamburger__planet-icon_ura"></div>
-                    <Link className="hamburger__planet-link" to="/uranus">uranus</Link>
+                    <p className="hamburger__planet-name">uranus</p>
                     <div className="hamburger__icon-chevron"></div>
                 </li>
+            </Link>
+                <Link className="hamburger__planet-link" to="/neptune" onClick={closeMenu}>
                 <li className="hamburger__planet">
                     <div className="hamburger__planet-icon hamburger__planet-icon_nep"></div>
-                    <Link className="hamburger__planet-link" to="/neptune">neptune</Link>
+                    <p className="hamburger__planet-name">neptune</p>
                     <div className="hamburger__icon-chevron"></div>
                 </li>
+            </Link>
             </ul>
         </nav>
     )

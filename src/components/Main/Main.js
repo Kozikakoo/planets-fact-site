@@ -33,6 +33,10 @@ function Main({
         }
     }
 
+    const handleCloseMenu = () => {
+        setIsOpenMenu(false)
+    }
+
     const handleChangeStructure = () => {
         setIsClickedStructure(true)
         setIsClickedOverview(false)
@@ -97,7 +101,7 @@ function Main({
                             Geology
                     </button>
                 </div>
-                {isOpenMenu && <MenuPlanets/>}
+                {isOpenMenu && <MenuPlanets closeMenu={handleCloseMenu}/>}
                 <div className="planet__img-container">
                     <img className="planet__img" src={handleChangeImage()} alt="Planet"/>
                 </div>

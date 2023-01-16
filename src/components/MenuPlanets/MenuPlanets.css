@@ -46,6 +46,10 @@
 
 .hamburger__planet-link {
     text-decoration: none;
+
+}
+
+.hamburger__planet-name {
     color: #FFFFFF;
 }
 
