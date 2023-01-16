@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/planets-fact-site/static/css/main.4fccbde1.css",
-    "main.js": "/planets-fact-site/static/js/main.b04c7dd5.js",
+    "main.js": "/planets-fact-site/static/js/main.cf06dfeb.js",
     "static/js/787.6e51ec5c.chunk.js": "/planets-fact-site/static/js/787.6e51ec5c.chunk.js",
     "static/media/spartan-mb-5.woff2": "/planets-fact-site/static/media/spartan-mb-5.ac9f4f53bfcd1512af1e.woff2",
     "static/media/spartan-mb-5.eot": "/planets-fact-site/static/media/spartan-mb-5.f86645aedcb3f786efbd.eot",
@@ -44,11 +44,11 @@
     "static/media/icon-hamburger.svg": "/planets-fact-site/static/media/icon-hamburger.05a40a49142005f6faf2.svg",
     "static/media/icon-chevron.svg": "/planets-fact-site/static/media/icon-chevron.8915cee97f993fb990aa.svg",
     "main.4fccbde1.css.map": "/planets-fact-site/static/css/main.4fccbde1.css.map",
-    "main.b04c7dd5.js.map": "/planets-fact-site/static/js/main.b04c7dd5.js.map",
+    "main.cf06dfeb.js.map": "/planets-fact-site/static/js/main.cf06dfeb.js.map",
     "787.6e51ec5c.chunk.js.map": "/planets-fact-site/static/js/787.6e51ec5c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4fccbde1.css",
-    "static/js/main.b04c7dd5.js"
+    "static/js/main.cf06dfeb.js"
   ]
 }
