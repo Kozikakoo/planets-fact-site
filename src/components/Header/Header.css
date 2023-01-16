@@ -107,9 +107,11 @@
         flex-direction: row;
         padding: 16px 24px;
     }
+
     .header__name {
         margin: 0;
     }
+
     .header__nav {
         display: none;
     }
@@ -120,5 +122,10 @@
         width: 24px;
         height: 17px;
 
+    }
+
+    .header__menu:hover {
+        cursor: pointer;
+        opacity: 0.5;
     }
 }

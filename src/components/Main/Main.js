@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../Header/Header";
 import icon from "../../assets/icon-source.svg"
+import MenuPlanets from "../MenuPlanets/MenuPlanets";
 
 
 function Main({
@@ -21,6 +22,16 @@ function Main({
     const [isClickedOverview, setIsClickedOverview] = React.useState(true)
     const [isClickedStructure, setIsClickedStructure] = React.useState(false)
     const [isClickedGeology, setIsClickedGeology] = React.useState(false)
+    const [isOpenMenu, setIsOpenMenu] = React.useState(false)
+
+    const handleOpenMenu = () => {
+        if(isOpenMenu) {
+            setIsOpenMenu(false)
+        }
+        else {
+            setIsOpenMenu(true)
+        }
+    }
 
     const handleChangeStructure = () => {
         setIsClickedStructure(true)
@@ -71,7 +82,7 @@ function Main({
 
     return (
         <>
-            <Header/>
+            <Header openMenu={handleOpenMenu}/>
             <main className="planet">
 
                 <div className="planet__hidden-button">
@@ -86,7 +97,7 @@ function Main({
                             Geology
                     </button>
                 </div>
-
+                {isOpenMenu && <MenuPlanets/>}
                 <div className="planet__img-container">
                     <img className="planet__img" src={handleChangeImage()} alt="Planet"/>
                 </div>

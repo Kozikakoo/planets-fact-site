@@ -1,11 +1,18 @@
 import React from "react";
 import {Link} from "react-router-dom"
+import MenuPlanets from "../MenuPlanets/MenuPlanets";
 
-function Header() {
+function Header({openMenu}) {
+
+
+    const handleOpenMenu = () => {
+        openMenu()
+    };
+
     return (
         <header className="header">
             <h1 className="header__name">THE PLANETS</h1>
-            <div className="header__menu"></div>
+            <div className="header__menu" onClick={handleOpenMenu}></div>
             <nav className="header__nav">
                 <ul className="header__planets">
                     <li className="header__planet">
